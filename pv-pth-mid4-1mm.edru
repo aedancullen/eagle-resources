@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE designrules SYSTEM "eagle.dtd">
+<eagle version="9.7.0">
+<designrules name="pv-pth-mid4-1mm">
+<description language="en">PV PTH Mid-Density 4-Layer</description>
+<param name="layerSetup" value="(1+2*15+16)"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="0.1mm"/>
+<param name="mdWirePad" value="0.1mm"/>
+<param name="mdWireVia" value="0.1mm"/>
+<param name="mdPadPad" value="0.1mm"/>
+<param name="mdPadVia" value="0.1mm"/>
+<param name="mdViaVia" value="0.1mm"/>
+<param name="mdSmdPad" value="0mil"/>
+<param name="mdSmdVia" value="0mil"/>
+<param name="mdSmdSmd" value="0mil"/>
+<param name="mdViaViaSameLayer" value="6mil"/>
+<param name="mnLayersViaInSmd" value="2"/>
+<param name="mdCopperDimension" value="0.2mm"/>
+<param name="mdDrill" value="0.2mm"/>
+<param name="mdSmdStop" value="0mil"/>
+<param name="msWidth" value="0.1mm"/>
+<param name="msDrill" value="0.15mm"/>
+<param name="msMicroVia" value="9.99mm"/>
+<param name="msBlindViaRatio" value="0.5"/>
+<param name="rvPadTop" value="0.25"/>
+<param name="rvPadInner" value="0.25"/>
+<param name="rvPadBottom" value="0.25"/>
+<param name="rvViaOuter" value="0.25"/>
+<param name="rvViaInner" value="0.25"/>
+<param name="rvMicroViaOuter" value="0.25"/>
+<param name="rvMicroViaInner" value="0.25"/>
+<param name="rlMinPadTop" value="0.1mm"/>
+<param name="rlMaxPadTop" value="0.1mm"/>
+<param name="rlMinPadInner" value="0.1mm"/>
+<param name="rlMaxPadInner" value="0.1mm"/>
+<param name="rlMinPadBottom" value="0.1mm"/>
+<param name="rlMaxPadBottom" value="0.1mm"/>
+<param name="rlMinViaOuter" value="0.1mm"/>
+<param name="rlMaxViaOuter" value="0.1mm"/>
+<param name="rlMinViaInner" value="0.1mm"/>
+<param name="rlMaxViaInner" value="0.1mm"/>
+<param name="rlMinMicroViaOuter" value="0.1mm"/>
+<param name="rlMaxMicroViaOuter" value="0.1mm"/>
+<param name="rlMinMicroViaInner" value="0.1mm"/>
+<param name="rlMaxMicroViaInner" value="0.1mm"/>
+<param name="psTop" value="-1"/>
+<param name="psBottom" value="-1"/>
+<param name="psFirst" value="-1"/>
+<param name="psElongationLong" value="100"/>
+<param name="psElongationOffset" value="100"/>
+<param name="mvStopFrame" value="1"/>
+<param name="mvCreamFrame" value="0"/>
+<param name="mlMinStopFrame" value="0mil"/>
+<param name="mlMaxStopFrame" value="0mil"/>
+<param name="mlMinCreamFrame" value="0mil"/>
+<param name="mlMaxCreamFrame" value="0mil"/>
+<param name="mlViaStopLimit" value="100mm"/>
+<param name="srRoundness" value="0"/>
+<param name="srMinRoundness" value="0mil"/>
+<param name="srMaxRoundness" value="0mil"/>
+<param name="slThermalIsolate" value="0.2mm"/>
+<param name="slThermalsForVias" value="0"/>
+<param name="dpMaxLengthDifference" value="10mm"/>
+<param name="dpGapFactor" value="2.5"/>
+<param name="checkAngle" value="0"/>
+<param name="checkFont" value="1"/>
+<param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
+<param name="useDiameter" value="13"/>
+<param name="maxErrors" value="50"/>
+<layerstackup name="4 Layer Stack" type="Standard Stackup" display_unit="mic" roughness_model="1" allow_instack_material_edit="yes">
+ <layerdef type="Silk Screen" id="{085caebf-89d1-45bf-9518-1916ab88467b}" name="Top SilkScreen"/>
+ <layerdef type="Solder Mask" id="{99614d9a-d5e6-4360-8b2c-f7e65743a336}" name="Top SolderMask">
+ <material name="SR:Black" thickness="0.0254mm" dielectric_constant="4" dissipation_factor="0.03" glass_transition_temperature="125degC" color="#FF000000" description="Solder Mask"/>
+</layerdef>
+ <layerdef type="Surface Finish" id="{f8d5e56e-b20c-4f70-8519-e385341651f9}" name="Top Surface Finish">
+ <material type="HASL-LeadFree" material="Lead-Free" process="HASL Lead-Free" thickness="0.02mm" color="#FFF2F2F2" description="Surface Finish"/>
+</layerdef>
+ <layerdef type="Signal" id="{fbc01b46-abbe-4bc3-8ad2-976ed295de37}" layer="1" name="Top" comment="No comment">
+ <material name="CuFoil:007" thickness="0.035mm" weight="1oz" process="Electro Deposited" description="ED: Copper Foil"/>
+</layerdef>
+ <layerdef type="Prepreg" id="{14075322-9aa0-4c03-a7d7-73a31d643c35}" layer="2" name="Dielectric-2" comment="Top-Middle Dielectric Layer" locally_modified_material="yes">
+ <material name="User Defined" oem="Isola" oem_material="185HR" glass_style="106" thickness="0.2mm" resin="77%" dielectric_constant_1g="3.69" dissipation_factor_1g="0.024" glass_transition_temperature="180degC" description="Isola Pre-preg" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{17c3f1f2-d7cb-464b-81fc-7a0d8bb47141}" layer="2" name="Route2" comment="No comment">
+ <material name="CuFoil:007" thickness="0.035mm" weight="1oz" process="Electro Deposited" description="ED: Copper Foil"/>
+</layerdef>
+ <layerdef type="Core" id="{8b62e7fa-f68f-4261-a62c-19ff111c7efa}" layer="3" name="Dielectric-3" comment="Middle Dielectric Layer" locally_modified_material="yes">
+ <material name="User Defined" oem="Isola" oem_material="FR408HR" construction="2x2116/3x1652" thickness="0.43mm" resin="52%" dielectric_constant_1g="3.76" dissipation_factor_1g="0.0088" glass_transition_temperature="180degC" description="Core 2x2116/3x1652" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{89c14100-470c-42dd-bba0-c28e07098c70}" layer="15" name="Route15" comment="No comment">
+ <material name="CuFoil:007" thickness="0.035mm" weight="1oz" process="Electro Deposited" description="ED: Copper Foil"/>
+</layerdef>
+ <layerdef type="Prepreg" id="{b9f97ad0-8783-4602-8e19-b00f52621d70}" layer="4" name="Dielectric-4" comment="Bottom-Middle Dielectric Layer" locally_modified_material="yes">
+ <material name="User Defined" oem="Isola" oem_material="185HR" glass_style="106" thickness="0.2mm" resin="77%" dielectric_constant_1g="3.69" dissipation_factor_1g="0.024" glass_transition_temperature="180degC" description="Isola Pre-preg" source="User"/>
+</layerdef>
+ <layerdef type="Signal" id="{50a2329e-89fb-4073-a50a-1754f5a883eb}" layer="16" name="Bottom" comment="No comment">
+ <material name="CuFoil:007" thickness="0.035mm" weight="1oz" process="Electro Deposited" description="ED: Copper Foil"/>
+</layerdef>
+ <layerdef type="Surface Finish" id="{55e8f479-7c65-4bc6-a04a-d0fcb3ec0232}" name="Bottom Surface Finish">
+ <material type="HASL-LeadFree" material="Lead-Free" process="HASL Lead-Free" thickness="0.02mm" color="#FFF2F2F2" description="Surface Finish"/>
+</layerdef>
+ <layerdef type="Solder Mask" id="{6a88b8e8-f2ac-48d3-b2ee-fa11b02bdd88}" name="Bottom SolderMask">
+ <material name="SR:Black" thickness="0.0254mm" dielectric_constant="4" dissipation_factor="0.03" glass_transition_temperature="125degC" color="#FF000000" description="Solder Mask"/>
+</layerdef>
+ <layerdef type="Silk Screen" id="{73d87a74-ea2c-461d-a139-935115ec5d40}" name="Bottom SilkScreen"/>
+ <viadef name="Thru 1:16" startlayer="1" stoplayer="16" complement="no"/>
+ </layerstackup>
+ </designrules>
+</eagle>
