@@ -7,30 +7,10 @@ import sys
 import math
 
 def parse_segment(ls, idx):
-    segment = ls[idx].split('=')[1]
+    segment = ls[idx].split("=")[1]
     return "".join(c for c in segment if c not in ['"', '/', '>'])
 
-infile = open(sys.argv[1], "r")
-line = infile.readline()
-
-seen_layers = set()
-
-while line != "":
-
-    if line.startswith("<wire") and "layer" in line:
-        ls = line.split(" ")
-        layer = int(parse_segment(ls, 6))
-
-        if layer >= 1 and layer <= 16:
-            seen_layers.add(layer)
-
-        line = infile.readline()
-
-    else:
-        line = infile.readline()
-
-infile.close()
-
+seen_layers = set(sys.argv[2].split(","))
 print(seen_layers)
 
 infile = open(sys.argv[1], "r")
